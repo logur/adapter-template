@@ -19,32 +19,32 @@ func New(logger interface{}) *Logger {
 	return &Logger{}
 }
 
-// Trace implements the logur.Logger interface.
+// Trace implements the Logur Logger interface.
 func (l *Logger) Trace(msg string, fields ...map[string]interface{}) {
 
 }
 
-// Debug implements the logur.Logger interface.
+// Debug implements the Logur Logger interface.
 func (l *Logger) Debug(msg string, fields ...map[string]interface{}) {
 
 }
 
-// Info implements the logur.Logger interface.
+// Info implements the Logur Logger interface.
 func (l *Logger) Info(msg string, fields ...map[string]interface{}) {
 
 }
 
-// Warn implements the logur.Logger interface.
+// Warn implements the Logur Logger interface.
 func (l *Logger) Warn(msg string, fields ...map[string]interface{}) {
 
 }
 
-// Error implements the logur.Logger interface.
+// Error implements the Logur Logger interface.
 func (l *Logger) Error(msg string, fields ...map[string]interface{}) {
 
 }
 
-// LevelEnabled implements logur.LevelEnabler interface.
+// LevelEnabled implements the Logur LevelEnabler interface.
 func (l *Logger) LevelEnabled(level logur.Level) bool {
 	switch level {
 	case logur.Trace:
