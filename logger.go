@@ -1,4 +1,4 @@
-// Package adapter provides a Logur adapter for TEMPLATE.
+// Package template provides a Logur adapter for TEMPLATE.
 package template
 
 import (
