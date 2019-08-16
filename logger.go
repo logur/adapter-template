@@ -10,7 +10,7 @@ type Logger struct {
 }
 
 // New returns a new Logur logger.
-// If logger is nil, a default instance will be created.
+// If logger is nil, a default instance is created.
 func New(logger interface{}) *Logger {
 	if logger == nil {
 		return &Logger{}
