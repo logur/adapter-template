@@ -71,6 +71,8 @@ replace "s|.idea/${originalProjectName}.iml|.idea/adapter-${adapterName}.iml|g" 
 # Run configurations
 replace 's|name="'${originalProjectName}'"|name="'adapter-${adapterName}'"|' .idea/runConfigurations/Test.xml
 
+find . -type f -name '*.go' | while read file; do replace "s|package ${originalAdapterName}|package ${adapterName}|; s|/${originalAdapterName}|/${adapterName}|g; s|Package ${originalAdapterName}|Package ${adapterName}|g; s|${originalAdapterName}adapter|${adapterName}adapter|g" "$file"; done
+
 # Other project files
 declare -a files=("CHANGELOG.md" "go.mod" ".golangci.yml")
 for file in "${files[@]}"; do
