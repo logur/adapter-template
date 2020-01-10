@@ -1,7 +1,7 @@
 # Logur adapter for TEMPLATE
 
-[![CircleCI](https://circleci.com/gh/logur/adapter-template.svg?style=svg)](https://circleci.com/gh/logur/adapter-template)
-[![Coverage](https://gocover.io/_badge/logur.dev/adapter/template)](https://gocover.io/logur.dev/adapter/template)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/logur/adapter-template/CI?style=flat-square)
+[![Codecov](https://img.shields.io/codecov/c/github/logur/adapter-template?style=flat-square)](https://codecov.io/gh/logur/adapter-template)
 [![Go Report Card](https://goreportcard.com/badge/logur.dev/adapter/template?style=flat-square)](https://goreportcard.com/report/logur.dev/adapter/template)
 [![GolangCI](https://golangci.com/badges/github.com/logur/adapter-template.svg)](https://golangci.com/r/github.com/logur/adapter-template)
 [![Go Version](https://img.shields.io/badge/go%20version-%3E=1.11-61CFDD.svg?style=flat-square)](https://github.com/logur/adapter-template)
@@ -34,7 +34,7 @@ func main() {
 
 When all coding and testing is done, please run the test suite:
 
-``` bash
+```bash
 $ make check
 ```
 
