@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"logur.dev/logur"
-	"logur.dev/logur/logtesting"
+	"logur.dev/logur/conformance"
 )
 
 // nolint: gochecknoglobals
@@ -16,21 +16,19 @@ var levelMap = map[logur.Level]string{
 	logur.Error: "error",
 }
 
-func newTestSuite() *logtesting.LoggerTestSuite {
-	return &logtesting.LoggerTestSuite{
-		LoggerFactory: func(level logur.Level) (logur.Logger, func() []logur.LogEvent) {
+func TestLogger(t *testing.T) {
+	t.Skip("implement me")
+
+	suite := conformance.TestSuite{
+		LoggerFactory: func(level logur.Level) (logur.Logger, conformance.TestLogger) {
 			var logger interface{}
 			_ = levelMap
 
-			return New(logger), func() []logur.LogEvent {
+			return New(logger), conformance.TestLoggerFunc(func() []logur.LogEvent {
 				return []logur.LogEvent{}
-			}
+			})
 		},
 	}
-}
 
-func TestLoggerSuite(t *testing.T) {
-	t.Skip("implement me")
-
-	newTestSuite().Execute(t)
+	suite.Run(t)
 }

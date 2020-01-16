@@ -2,6 +2,8 @@
 package template
 
 import (
+	"context"
+
 	"logur.dev/logur"
 )
 
@@ -42,6 +44,26 @@ func (l *Logger) Warn(msg string, fields ...map[string]interface{}) {
 // Error implements the Logur Logger interface.
 func (l *Logger) Error(msg string, fields ...map[string]interface{}) {
 
+}
+
+func (l *Logger) TraceContext(_ context.Context, msg string, fields ...map[string]interface{}) {
+	l.Trace(msg, fields...)
+}
+
+func (l *Logger) DebugContext(_ context.Context, msg string, fields ...map[string]interface{}) {
+	l.Debug(msg, fields...)
+}
+
+func (l *Logger) InfoContext(_ context.Context, msg string, fields ...map[string]interface{}) {
+	l.Info(msg, fields...)
+}
+
+func (l *Logger) WarnContext(_ context.Context, msg string, fields ...map[string]interface{}) {
+	l.Warn(msg, fields...)
+}
+
+func (l *Logger) ErrorContext(_ context.Context, msg string, fields ...map[string]interface{}) {
+	l.Error(msg, fields...)
 }
 
 // LevelEnabled implements the Logur LevelEnabler interface.
